@@ -2,8 +2,14 @@
 Mods: {
 	immersiveinfinity: {
 		Items: {
-			DoblinusOre.DisplayName: Doblinus Ore
-			DoblinusBar.DisplayName: Doblinus Bar
+			DoblinusOre: {
+				DisplayName: Doblinus Ore
+			}
+
+			DoblinusBar: {
+				DisplayName: Doblinus Bar
+			}
+
 			Fake_Noon_Monsoon.DisplayName: Noon Monsoon
 			Noon_Monsoon_Bar.DisplayName: Noon Monson Bar
 
@@ -17,7 +23,9 @@ Mods: {
 				Tooltip: Summons The Celestial God
 			}
 
-			CelestialGodRelic.DisplayName: Celestial God Relic
+			CelestialGodRelic: {
+				DisplayName: Celestial God Relic
+			}
 
 			IronbarkPiercer: {
 				DisplayName: Ironbark Piercer
@@ -78,23 +86,121 @@ Mods: {
 				DisplayName: Timeworn Scroll
 				Tooltip: It was created for practical use, is very old, but appears new and was taken from its rightful owner.
 			}
+
+			DoblinusChest: {
+				DisplayName: Doblinus Chest
+				Tooltip: 3% Increased critical strike chance
+			}
+
+			DoblinusHelmet: {
+				DisplayName: Doblinus Helmet
+				Tooltip: 5% increased melee damage
+			}
+
+			DoblinusPants: {
+				DisplayName: Doblinus Leggings
+				Tooltip: 7% Increased movement speed
+			}
+
+			Fate: {
+				DisplayName: Fate
+				Tooltip: Sword
+			}
+
+			Throwing_axe: {
+				DisplayName: Throwing axe
+				Tooltip: Throwing axe
+			}
+
+			SprintersOfEclipseWings: {
+				DisplayName: Sprinters Of Eclipse
+				Tooltip:
+					'''
+					Fell the power of Eclipse
+					Grants permament regeneration boost
+					Grants permament jump boost
+					Owner can fly and run at HUUUGE speed
+					12% attack speed
+					15% damage
+					Grants immunity to lava
+					Grants water walking ability
+
+					'''
+			}
+
+			ImpSoul: {
+				DisplayName: Imp Soul
+				Tooltip: The essence of Evil...
+			}
+
+			XenonBar.DisplayName: Xenon Bar
+			XenonOre.DisplayName: Xenon Ore
+
+			SatanBreath: {
+				DisplayName: Satan's Brath
+				Tooltip: Be aware of huge power of satan.
+			}
 		}
 
-		Tiles.DoblinusOre.MapEntry: Doblinus
+		Tiles: {
+			DoblinusOre: {
+				MapEntry: Mods.immersiveinfinity.MapObject.DoblinusOre
+			}
+
+			CelestialGodRelicTile.MapEntry: Celestial God Relic
+			XenonOre.MapEntry: Mods.immersiveinfinity.MapObject.XenonOre
+		}
 
 		NPCs: {
-			Fake.DisplayName: Fake Slime God
-			CelestialGod.DisplayName: Celestial God
-			MysticTrader.DisplayName: Mystic Trader
+			Fake: {
+				DisplayName: Fake Slime God
+			}
+
+			CelestialGod: {
+				DisplayName: Celestial God
+			}
+
+			MysticTrader: {
+				DisplayName: Mystic Trader
+			}
+
+			Celestial.DisplayName: Celestial
+			GoldenSlime.DisplayName: Golden Slime
+			PlatinumSlime.DisplayName: Platinum Slime
 		}
 
 		Projectiles: {
-			EyeofCorruptionProjectile.DisplayName: Eye of Corruption Projectile
-			GoldenFlailProjectile.DisplayName: GoldenFlailProjectile
-			PlatiniumFlailProjectile.DisplayName: GoldenFlailProjectile
-			TimewornScrollProjectile.DisplayName: Timeworn Scroll Projectile
-			TwilightEtcherProjectile.DisplayName: Twilight Etcher Projectile
-			Unholy_Might_Projectile.DisplayName: Unholy Might Projectile
+			EyeofCorruptionProjectile: {
+				DisplayName: Eye of Corruption Projectile
+			}
+
+			GoldenFlailProjectile: {
+				DisplayName: GoldenFlailProjectile
+			}
+
+			PlatiniumFlailProjectile: {
+				DisplayName: GoldenFlailProjectile
+			}
+
+			TimewornScrollProjectile: {
+				DisplayName: Timeworn Scroll Projectile
+			}
+
+			TwilightEtcherProjectile: {
+				DisplayName: Twilight Etcher Projectile
+			}
+
+			Unholy_Might_Projectile: {
+				DisplayName: Unholy Might Projectile
+			}
+
+			BerghamBladeProjectile.DisplayName: BerghamBladeProjectile
+			BerghamBladeProjectile_Extra.DisplayName: BerghamBladeProjectile_Extra
+			FateProjectile.DisplayName: Fate Projectile
+			PostFate.DisplayName: Fate Projectile Post
+			SatanBreathProjectile.DisplayName: Satan's Breath Projectile
+			SatanBreathProjectilePost.DisplayName: Satan's Breath Projectile Post
+			TimewornScrollProjectilePost.DisplayName: Timeworn Scroll Projectile
 		}
 	}
 }
