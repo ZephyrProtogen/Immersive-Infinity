@@ -6,9 +6,9 @@ using immersiveinfinity.Tiles;
 
 namespace immersiveinfinity.Common.Systems.GenPasses
 {
-    internal class DoblinusOreGenPass : GenPass
+    internal class XenonOreGenPass : GenPass
     {
-        public DoblinusOreGenPass(string name, float weight) : base(name, weight) { }
+        public XenonOreGenPass(string name, float weight) : base(name, weight) { }
 
         protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
         {
@@ -27,15 +27,14 @@ namespace immersiveinfinity.Common.Systems.GenPasses
                 int Y = WorldGen.genRand.Next(LowY, HighY); //don't touch
 
                 int OreMinimumSpread = 8;
-                int OreMaximumSpread = 16; 
+                int OreMaximumSpread = 16;
 
-                int OreMinimumFrequency = 14; 
-                int OreMaximumFrequency = 20; 
-
+                int OreMinimumFrequency = 14;
+                int OreMaximumFrequency = 20;
                 int OreSpread = WorldGen.genRand.Next(OreMinimumSpread, OreMaximumSpread + 1); //don't touch
                 int OreFrequency = WorldGen.genRand.Next(OreMinimumFrequency, OreMaximumFrequency + 1); //don't touch
 
-                WorldGen.TileRunner(X, Y, WorldGen.genRand.Next(8, 12), WorldGen.genRand.Next(3, 7), ModContent.TileType<DoblinusOre>());
+                WorldGen.TileRunner(X, Y, WorldGen.genRand.Next(5, 10), WorldGen.genRand.Next(5, 8), ModContent.TileType<XenonOre>());
             }
 
 

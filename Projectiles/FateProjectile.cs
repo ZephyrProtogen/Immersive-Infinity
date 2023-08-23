@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using On.Terraria.DataStructures;
 using System;
+using System.Security.Cryptography.X509Certificates;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,6 +11,7 @@ namespace immersiveinfinity.Projectiles
 {
     public class FateProjectile : ModProjectile
     {
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Fate Projectile");
@@ -22,7 +24,7 @@ namespace immersiveinfinity.Projectiles
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Melee;
             Projectile.tileCollide = true;
-            Projectile.penetrate = 4;
+            Projectile.penetrate = 2;
             
             
         }
@@ -36,40 +38,46 @@ namespace immersiveinfinity.Projectiles
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
-            Player owner = Main.player[Projectile.owner];
-            int random1 = Main.rand.Next(25);
-            if (random1 < 24)
+
+
+
+            if (Projectile.owner == Main.myPlayer)
             {
-                target.AddBuff(BuffID.OnFire, 60 * 8);
+
+                Player owner = Main.player[Projectile.owner];
+                float posX = Projectile.position.X;
+                float posY = Projectile.position.Y;
+                
+
+                int random1 = Main.rand.Next(25);
+                if (random1 < 24)
+                {
+                    target.AddBuff(BuffID.OnFire, 60 * 8);
+                }
+
+                else if (random1 == 24)
+                {
+                    owner.AddBuff(BuffID.OnFire, 60 * 8);
+                }
+
+
+            
+                    
+
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), posX + 500, posY -500, -16, 40, ModContent.ProjectileType<PostFate>(), 8, 2, Main.myPlayer, ProjectileID.TerraBeam);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), posX - 500, posY - 500, 16, 40, ModContent.ProjectileType<PostFate>(), 8, 2, Main.myPlayer, ProjectileID.TerraBeam);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), posX + 500, posY + 500, -16, -15, ModContent.ProjectileType<PostFate>(), 8, 2, Main.myPlayer, ProjectileID.TerraBeam);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), posX - 500, posY + 500, 16, -15, ModContent.ProjectileType<PostFate>(), 8, 2, Main.myPlayer, ProjectileID.TerraBeam);
+
+
+
+
+
+
+
+
             }
-
-            else if (random1 == 24)
-            {
-                owner.AddBuff(BuffID.OnFire, 60 * 8);
-            }
-
-            float posX = Projectile.position.X;
-            float posY = Projectile.position.Y;
-      
-
-            int random2 = Main.rand.Next(2);
-            if (random2 == 0)
-            {
-                posX = posX + 200;
-                posY = posY - 200;
-                ModContent.ProjectileType<PostFate>();
-            }
-
-            if (random2 == 1)
-            {
-                posX = posX - 200;
-                posY = posY - 200;
-            }
-
-
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(),posX, posY, 15,15, ModContent.ProjectileType<PostFate>(), 8, 2, Main.myPlayer, ProjectileID.TerraBeam);
         }
-
         
 
     }

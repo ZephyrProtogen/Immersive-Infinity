@@ -13,7 +13,8 @@ namespace immersiveinfinity.Common.Systems
             if(shiniesIndex != -1)
             {
                 tasks.Insert(shiniesIndex + 1, new DoblinusOreGenPass("Doblinus Ore Pass", 320f));
-                
+                tasks.Insert(shiniesIndex + 1, new XenonOreGenPass("Xenon Ore Pass", 320f));
+
             }
         }
 

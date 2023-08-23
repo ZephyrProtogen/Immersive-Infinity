@@ -1,9 +1,8 @@
 Immersive Infinity is still in developement
 For now it adds:
-- 6 Swords -
-- 1 Ore -
-- 2 Staffs -
-- 1 Bow -
-- 1 Accessory -
+- 14 Swords -
+- 2 Ores -
+- 2 Accessories -
 - 1 NPC -
-- 1 Very Rare Enemy -
+- 3 enemies -
+- 1 Boss -

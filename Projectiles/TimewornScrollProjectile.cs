@@ -23,7 +23,7 @@ namespace immersiveinfinity.Projectiles
             Projectile.DamageType = DamageClass.Magic;
             Projectile.friendly = true;
             Projectile.hostile = false;
-            Projectile.penetrate = 1;
+            Projectile.penetrate = 4;
             Projectile.timeLeft = 600;
             Projectile.light = 1f;                                              
             Projectile.ignoreWater = false;
@@ -45,11 +45,27 @@ namespace immersiveinfinity.Projectiles
         {
             float rotateSpeed = 0.35f * (float)Projectile.direction;
             Projectile.rotation += rotateSpeed;
-
-
-            {
-                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<TimewornScrollDust>(), Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f,
+            
+                   
+         
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<TimewornScrollDust>(), Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f,
                     0, default(Color), 1f);
+
+            
+         
+            
+        }
+
+        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            
+            for (int i = 0; i < 4; i++)
+            {
+
+                
+                Vector2 toPlayer = new Vector2(Main.CurrentPlayer.Center.X, Main.CurrentPlayer.Center.Y);
+
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(),toPlayer,Projectile.velocity,ModContent.ProjectileType<TimewornScrollProjectilePost>(),Projectile.damage/ 2,2 ,Main.myPlayer);
             }
         }
 

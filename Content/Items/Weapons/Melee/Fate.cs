@@ -50,12 +50,14 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
             recipe.AddIngredient(ItemID.PlatinumBar, 20);
             recipe.AddIngredient(ItemID.FallenStar, 12);
             recipe.AddIngredient(ItemID.Ruby, 10);
+            recipe.AddIngredient(ModContent.ItemType<ImpSoul>(), 25);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
 
             recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.GoldBar, 20);
             recipe.AddIngredient(ItemID.FallenStar, 12);
+            recipe.AddIngredient(ModContent.ItemType<ImpSoul>(), 25);
             recipe.AddIngredient(ItemID.Ruby, 10);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
