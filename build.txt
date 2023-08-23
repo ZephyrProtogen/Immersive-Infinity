@@ -1,0 +1,3 @@
+displayName = Immersive Infinity
+author = SnickerThePro, KubaHodi
+version = 0.163

@@ -1,0 +1,100 @@
+
+Mods: {
+	immersiveinfinity: {
+		Items: {
+			DoblinusOre.DisplayName: Doblinus Ore
+			DoblinusBar.DisplayName: Doblinus Bar
+			Fake_Noon_Monsoon.DisplayName: Noon Monsoon
+			Noon_Monsoon_Bar.DisplayName: Noon Monson Bar
+
+			TakeOffs: {
+				DisplayName: Take-Offs
+				Tooltip: Give instant speed and jump boost
+			}
+
+			MysteriousOrb: {
+				DisplayName: Mysterious Orb
+				Tooltip: Summons The Celestial God
+			}
+
+			CelestialGodRelic.DisplayName: Celestial God Relic
+
+			IronbarkPiercer: {
+				DisplayName: Ironbark Piercer
+				Tooltip: Just a regular Iron Bow
+			}
+
+			GoldenFlail: {
+				DisplayName: Golden Flail
+				Tooltip: Its Shining!
+			}
+
+			PlatiniumFlail: {
+				DisplayName: Platinium Flail
+				Tooltip: Its Shining!
+			}
+
+			Unholy_Might: {
+				DisplayName: Unholy Might
+				Tooltip: Its Shining!
+			}
+
+			Akumu: {
+				DisplayName: Akumu
+				Tooltip: Sword
+			}
+
+			BerghamBlade: {
+				DisplayName: Bergham Blade
+				Tooltip: Sword of The Elemental Gods
+			}
+
+			InfernoSword: {
+				DisplayName: Inferno Sword
+				Tooltip: It was forged by bars from Hell itself
+			}
+
+			knightfall: {
+				DisplayName: Knight's Fall
+				Tooltip: Sword of the forgotten
+			}
+
+			Leviatan: {
+				DisplayName: Leviatan
+				Tooltip: 它由最偉大的鍛造大師用最好的材料和傳說中的劍之一“地獄之劍”鍛造而成
+			}
+
+			TwilightEtcher: {
+				DisplayName: Twilight Etcher
+				Tooltip: Shiny
+			}
+
+			EyeofCorruption: {
+				DisplayName: Eye of Corruption
+				Tooltip: It was created for typical use and is seen as a cursed weapon.
+			}
+
+			TimewornScroll: {
+				DisplayName: Timeworn Scroll
+				Tooltip: It was created for practical use, is very old, but appears new and was taken from its rightful owner.
+			}
+		}
+
+		Tiles.DoblinusOre.MapEntry: Doblinus
+
+		NPCs: {
+			Fake.DisplayName: Fake Slime God
+			CelestialGod.DisplayName: Celestial God
+			MysticTrader.DisplayName: Mystic Trader
+		}
+
+		Projectiles: {
+			EyeofCorruptionProjectile.DisplayName: Eye of Corruption Projectile
+			GoldenFlailProjectile.DisplayName: GoldenFlailProjectile
+			PlatiniumFlailProjectile.DisplayName: GoldenFlailProjectile
+			TimewornScrollProjectile.DisplayName: Timeworn Scroll Projectile
+			TwilightEtcherProjectile.DisplayName: Twilight Etcher Projectile
+			Unholy_Might_Projectile.DisplayName: Unholy Might Projectile
+		}
+	}
+}
