@@ -136,7 +136,7 @@ namespace immersiveinfinity.NPCs.Bosses
 
             
 
-            if(NPC.life < 40000) //2 faza tego idioty :D
+            if(NPC.life < 40000) 
             {
 
 
@@ -171,7 +171,7 @@ namespace immersiveinfinity.NPCs.Bosses
 
 
 
-            if (NPC.life <= 10000)//Koniec tego idioty :D
+            if (NPC.life <= 10000)
             {
                 
                 if (NPC.ai[1] >= Main.rand.Next(300, 400))
