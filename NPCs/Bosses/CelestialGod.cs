@@ -176,7 +176,7 @@ namespace immersiveinfinity.NPCs.Bosses
                 
                 if (NPC.ai[1] >= Main.rand.Next(300, 400))
                 {
-                    Main.NewText("Zesty", Color.GreenYellow);
+                    Main.NewText("Zesty!", Color.GreenYellow);
                     for (int i = 0; i < 2; i++) {
                         
 
