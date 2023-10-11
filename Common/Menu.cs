@@ -1,14 +1,16 @@
-﻿using System;
-using System.Reflection;
-using IL.Terraria.GameContent;
-using immersiveinfinity;
-using Microsoft.Xna.Framework;
+﻿using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using immersiveinfinity;
+using System;
+using Microsoft.Xna.Framework;
+
+using ReLogic.Utilities;
+using System.Collections.Generic;
+using Terraria;
+using Terraria.Audio;
 
 
 namespace immersiveinfinity.Common;
@@ -23,29 +25,25 @@ public class immersiveinfinity : ModMenu
         }
     }
 
-    //int WhatMusic = MusicID.MenuMusic;
 
-    //int[] MusicChoices =
-    //{
-    //    MusicID.MenuMusic,
-    //    MusicID.ConsoleMenu,
-    //    MusicID.Title
-    //};
-    //public override void OnSelected()
-    //{
-    //    WhatMusic = MusicChoices[Main.rand.Next(3)];
-    //    if (DateTime.Now.Month == 4 && DateTime.Now.Day == 1)
-    //    {
-    //        WhatMusic = MusicID.Hell;
-    //    }
-    //}
-    //public override int Music => WhatMusic;
+ //public override ModSurfaceBackgroundStyle MenuBackgroundStyle => (ModSurfaceBackgroundStyle)ModContent.Request<ModSurfaceBackgroundStyle>("immersiveinfinity/UITextures/MenuB");   
+
+    static int Music2 = MusicLoader.GetMusicSlot("immersiveinfinity/Sounds/Music/Menu");
+
+    int[] MusicChoices = 
+    {
+        MusicID.MenuMusic,
+       MusicID.ConsoleMenu,
+        MusicID.Title
+    };
+
+    public override int Music => Music2;
     public override void Load()
     {
         base.Load();
 
         const string lastSelectedModMenuFieldName = "LastSelectedModMenu";
-        FieldInfo? lastSelectedModMenuFieldInfo =
+        FieldInfo lastSelectedModMenuFieldInfo =
             typeof(MenuLoader).GetField(lastSelectedModMenuFieldName, BindingFlags.NonPublic | BindingFlags.Static);
 
         if (lastSelectedModMenuFieldInfo != null)
