@@ -37,6 +37,7 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
 
 
         }
+        
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
@@ -47,5 +48,7 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
 
 
         }
+        
     }
+    
 }
