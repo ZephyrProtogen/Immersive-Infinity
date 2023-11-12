@@ -133,13 +133,8 @@ Mods: {
 				Tooltip: The essence of Evil...
 			}
 
-			XenonBar: {
-				DisplayName: Xenon Bar
-			}
-
-			XenonOre: {
-				DisplayName: Xenon Ore
-			}
+			XenonBar.DisplayName: Xenon Bar
+			XenonOre.DisplayName: Xenon Ore
 
 			SatanBreath: {
 				DisplayName: Satan's Brath
@@ -152,13 +147,8 @@ Mods: {
 				MapEntry: Mods.immersiveinfinity.MapObject.DoblinusOre
 			}
 
-			CelestialGodRelicTile: {
-				MapEntry: Celestial God Relic
-			}
-
-			XenonOre: {
-				MapEntry: Mods.immersiveinfinity.MapObject.XenonOre
-			}
+			CelestialGodRelicTile.MapEntry: Celestial God Relic
+			XenonOre.MapEntry: Mods.immersiveinfinity.MapObject.XenonOre
 		}
 
 		NPCs: {
@@ -174,17 +164,9 @@ Mods: {
 				DisplayName: Mystic Trader
 			}
 
-			Celestial: {
-				DisplayName: Celestial
-			}
-
-			GoldenSlime: {
-				DisplayName: Golden Slime
-			}
-
-			PlatinumSlime: {
-				DisplayName: Platinum Slime
-			}
+			Celestial.DisplayName: Celestial
+			GoldenSlime.DisplayName: Golden Slime
+			PlatinumSlime.DisplayName: Platinum Slime
 		}
 
 		Projectiles: {
@@ -212,33 +194,13 @@ Mods: {
 				DisplayName: Unholy Might Projectile
 			}
 
-			BerghamBladeProjectile: {
-				DisplayName: BerghamBladeProjectile
-			}
-
-			BerghamBladeProjectile_Extra: {
-				DisplayName: BerghamBladeProjectile_Extra
-			}
-
-			FateProjectile: {
-				DisplayName: Fate Projectile
-			}
-
-			PostFate: {
-				DisplayName: Fate Projectile Post
-			}
-
-			SatanBreathProjectile: {
-				DisplayName: Satan's Breath Projectile
-			}
-
-			SatanBreathProjectilePost: {
-				DisplayName: Satan's Breath Projectile Post
-			}
-
-			TimewornScrollProjectilePost: {
-				DisplayName: Timeworn Scroll Projectile
-			}
+			BerghamBladeProjectile.DisplayName: BerghamBladeProjectile
+			BerghamBladeProjectile_Extra.DisplayName: BerghamBladeProjectile_Extra
+			FateProjectile.DisplayName: Fate Projectile
+			PostFate.DisplayName: Fate Projectile Post
+			SatanBreathProjectile.DisplayName: Satan's Breath Projectile
+			SatanBreathProjectilePost.DisplayName: Satan's Breath Projectile Post
+			TimewornScrollProjectilePost.DisplayName: Timeworn Scroll Projectile
 		}
 	}
 }

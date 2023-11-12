@@ -1,4 +1,5 @@
 ﻿
+using IL.Terraria.Audio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,6 +10,8 @@ using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
+using On.Terraria.Audio;
 
 namespace immersiveinfinity.Content.Items.Accessories
 {
@@ -19,7 +22,7 @@ namespace immersiveinfinity.Content.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Sprinters Of Eclipse"); 
-            Tooltip.SetDefault("Fell the power of Eclipse\n"
+            Tooltip.SetDefault("Use the unimaginary power of Eclipse\n"
                 + "Grants permament regeneration boost\n"
                 + "Grants permament jump boost\n"
                 + "Owner can fly and run at HUUUGE speed\n"
@@ -50,10 +53,12 @@ namespace immersiveinfinity.Content.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
+            
+
             player.GetDamage(DamageClass.Generic) += 0.15f;
             player.GetAttackSpeed(DamageClass.Generic) += 0.12f;
-            player.moveSpeed += 3f;
-            player.accRunSpeed += 4f;
+            player.maxRunSpeed = 8f;
+            player.accRunSpeed = 12f;
             player.lifeRegen += 20;
             player.jumpBoost = true;
             player.jumpSpeedBoost = 2f;
@@ -62,8 +67,8 @@ namespace immersiveinfinity.Content.Items.Accessories
             player.fireWalk = true;
             player.waterWalk = true;
             player.honey = true;
-            
 
+     
         }
 
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising, ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
@@ -77,8 +82,8 @@ namespace immersiveinfinity.Content.Items.Accessories
 
         public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
         {
-            speed = 4f;
-            acceleration += 2f;
+            speed = 16f;
+            acceleration += 1.5f;
             
         }
         public override void AddRecipes()
@@ -91,12 +96,12 @@ namespace immersiveinfinity.Content.Items.Accessories
             recipe.AddIngredient(ItemID.PowerGlove, 1);
             recipe.AddIngredient(ItemID.SwiftnessPotion, 10);
             recipe.AddIngredient(ModContent.ItemType<TakeOffs>(), 1);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
 
         }
 
-    
+     
 
 
     }

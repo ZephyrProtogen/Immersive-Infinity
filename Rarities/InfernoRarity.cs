@@ -12,7 +12,7 @@ public class InfernoRarity : ModRarity
         get
         {
 
-            return Color.DarkViolet;
+            return Color.DarkGoldenrod;
         }
     }
 

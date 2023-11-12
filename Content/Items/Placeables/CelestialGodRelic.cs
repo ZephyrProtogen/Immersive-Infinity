@@ -20,7 +20,7 @@ namespace immersiveinfinity.Content.Items.Placeables
             Item.useAnimation = 15;
 
             Item.useStyle = ItemUseStyleID.Swing;
-
+            Item.rare = ItemRarityID.Master;
             Item.autoReuse = true;
             Item.useTurn = true;
 

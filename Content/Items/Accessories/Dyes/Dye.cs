@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.Graphics.Effects;
+﻿using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
+using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
-using static Terraria.ModLoader.ModContent;
-using immersiveinfinity;
+using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
-using Terraria;
 
 namespace immersiveinfinity.Content.Items.Accessories.Dyes
 {
@@ -18,47 +12,32 @@ namespace immersiveinfinity.Content.Items.Accessories.Dyes
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dye");
-        }
-        public override void Load()
-        {
+            DisplayName.SetDefault("DYIES");
+            Tooltip.SetDefault("caca\n"
+                + "yes\n"
+            );
 
-            // All of this loading needs to be client-side.
-
-            if (Main.netMode != NetmodeID.Server)
+            // Avoid loading assets on dedicated servers. They don't use graphics cards.
+            if (!Main.dedServ)
             {
-                // First, you load in your shader file.
-                // You'll have to do this regardless of what kind of shader it is,
-                // and you'll have to do it for every shader file.
-                // This example assumes you have both armour and screen shaders.
-
-                Ref<Effect> dyeRef = new Ref<Effect>((Effect)Mod.Assets.Request<Effect>("immersiveinfinity/Effects/Dye"));
-                Ref<Effect> specialRef = new Ref<Effect>((Effect)Mod.Assets.Request<Effect>("immersiveinfinity/Effects/Dye"));
-                Ref<Effect> filterRef = new Ref<Effect>((Effect)Mod.Assets.Request<Effect>("immersiveinfinity/Effects/Dye"));
-                // To add a dye, simply add this for every dye you want to add.
-                // "PassName" should correspond to the name of your pass within the *technique*,
-                // so if you get an error here, make sure you've spelled it right across your effect file.
-
-                GameShaders.Armor.BindShader(ItemType<Dyes.Dye>(), new ArmorShaderData(dyeRef, "i forgor"));
-
-                // If your dye takes specific parameters such as colour, you can append them after binding the shader.
-                // IntelliSense should be able to help you out here.  
-
-                GameShaders.Armor.BindShader(ItemType<Dyes.Dye>(), new ArmorShaderData(dyeRef, "ColourPass")).UseColor(1.5f, 0.15f, 0f);
-
-
-                // To bind a miscellaneous, non-filter effect, use this.
-                // If you're actually using this, you probably already know what you're doing anyway.
-
-               
-                // To bind a screen shader, use this.
-                // EffectPriority should be set to whatever you think is reasonable.  
-
-            
+                // The following code creates an effect (shader) reference and associates it with this item's type Id.
+                GameShaders.Armor.BindShader(
+                    Item.type,
+                    new ArmorShaderData(new Ref<Effect>(Mod.Assets.Request<Effect>("Effects/Dye", AssetRequestMode.ImmediateLoad).Value), "DyePass") // Be sure to update the effect path and pass name here.
+                );
             }
+
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
+        }
+
+        public override void SetDefaults()
+        {
+            // Item.dye will already be assigned to this item prior to SetDefaults because of the above GameShaders.Armor.BindShader code in Load().
+            // This code here remembers Item.dye so that information isn't lost during CloneDefaults.
+            Item.width = 42;
+            Item.height = 34;
+            Item.value = 500;
+            Item.dye = ItemRarityID.Blue;
         }
     }
-
 }
-    
-

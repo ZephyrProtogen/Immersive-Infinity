@@ -19,7 +19,7 @@ namespace immersiveinfinity.Content.Items.Placeables
             Item.maxStack = 999;
             Item.consumable = true;
             Item.value = Item.buyPrice(silver: 20);
-
+            Item.rare = ItemRarityID.Purple;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useAnimation = 15;
             Item.useTime = 10;

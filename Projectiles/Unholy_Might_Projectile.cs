@@ -58,11 +58,6 @@ namespace immersiveinfinity.Projectiles
             
       
             
-            
-
-
-
-
             {
 
                 int dust = Dust.NewDust(Projectile.Center, 8, 8, DustID.GemRuby, 0.9f, 0.9f, 0, default, 2);

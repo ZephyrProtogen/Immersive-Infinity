@@ -31,23 +31,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PanSm\\.nuget\\packages\\": {},
+    "C:\\Users\\jakhod\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PanSm\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
+      "projectUniqueName": "C:\\Users\\jakhod\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
       "projectName": "immersiveinfinity",
-      "projectPath": "C:\\Users\\PanSm\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
-      "packagesPath": "C:\\Users\\PanSm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PanSm\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\obj\\",
+      "projectPath": "C:\\Users\\jakhod\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
+      "packagesPath": "C:\\Users\\jakhod\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jakhod\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\PanSm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jakhod\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

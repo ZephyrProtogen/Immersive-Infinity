@@ -1,6 +1,6 @@
 Immersive Infinity is still in developement
 For now it adds:
-- 14 Weapons -
+- 14 Swords -
 - 2 Ores -
 - 2 Accessories -
 - 1 NPC -

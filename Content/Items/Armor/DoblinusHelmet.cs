@@ -1,4 +1,5 @@
-﻿using System;
+﻿using immersiveinfinity.Content.Items.Placeables;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,15 +20,15 @@ namespace immersiveinfinity.Content.Items.Armor
             Item.width = 20;
             Item.height = 20;
             Item.value = 1500;
-            Item.rare = 1;
-            Item.defense = 2;
+            Item.rare = ItemRarityID.Purple;
+            Item.defense = 22;
         }
 
 
 
         public override void UpdateEquip(Player player)
         {
-            player.GetDamage(DamageClass.Melee) += 0.85f;
+            player.GetDamage(DamageClass.Melee) *= 1.05f;
            
         }
    
@@ -35,8 +36,8 @@ namespace immersiveinfinity.Content.Items.Armor
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "15% Increased damage";
-            player.GetDamage(DamageClass.Melee) += 0.15f;
+            player.setBonus = "15% Increased melee damage";
+            player.GetDamage(DamageClass.Melee) *= 1.15f;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -53,8 +54,7 @@ namespace immersiveinfinity.Content.Items.Armor
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.GoldBar, 16);
-            recipe.AddIngredient(ItemID.Ruby, 1);
+            recipe.AddIngredient(ModContent.ItemType<DoblinusBar>(), 16);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
 

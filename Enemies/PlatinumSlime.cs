@@ -15,17 +15,20 @@ namespace immersiveinfinity.Enemies
         public override void SetDefaults()
         {
             NPC.aiStyle = 1;
-            NPC.scale = 1.5f;
+            NPC.scale = 1.2f;
             NPC.npcSlots = 1;
             NPC.width = 20;
             NPC.height = 20;
             NPC.defense = 6;
-            NPC.lifeMax = 180;
+            NPC.damage = 45;
+            NPC.lifeMax = 160;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.2f;
             Main.npcFrameCount[NPC.type] = 2;
             NPC.value = 1000f;
+            NPC.friendly = false;
+            AIType = NPCID.BlueSlime;
             AnimationType = NPCID.BlueSlime;
         }
 

@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
-
+using immersiveinfinity.Rarities;
 
 namespace immersiveinfinity.Content.Items.Placeables
 {
@@ -21,6 +21,7 @@ namespace immersiveinfinity.Content.Items.Placeables
             Item.maxStack = 999;
             Item.consumable = true;
             Item.value = Item.buyPrice(silver: 5);
+            Item.rare = ModContent.RarityType<XenonRarity>();
 
 
 

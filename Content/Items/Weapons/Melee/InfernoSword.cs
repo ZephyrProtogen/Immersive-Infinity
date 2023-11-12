@@ -2,6 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using immersiveinfinity.Rarities;
 
 namespace immersiveinfinity.Content.Items.Weapons.Melee
 {
@@ -31,13 +32,12 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
             Item.crit = 20;
 
             Item.value = Item.buyPrice(silver: 80, copper: 50);
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ModContent.RarityType<InfernoRarity>();
 
             Item.UseSound = SoundID.Item1;
 
 
         }
-        
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
@@ -48,7 +48,5 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
 
 
         }
-        
     }
-    
 }

@@ -3,7 +3,6 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using immersiveinfinity.Projectiles;
-using Terraria.Audio;
 
 namespace immersiveinfinity.Content.Items.Weapons.Melee
 {
@@ -19,7 +18,6 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
         }
         public override void SetDefaults()
         {
-
             Item.width = 58;
             Item.height = 58;
             Item.scale = 1.4f;
@@ -36,7 +34,7 @@ namespace immersiveinfinity.Content.Items.Weapons.Melee
 
             Item.value = Item.buyPrice(gold: 30, silver: 80, copper: 50);
             Item.value = Item.sellPrice(gold: 1, silver: 80);
-            Item.rare = ItemRarityID.Blue;
+            Item.rare = ItemRarityID.LightRed;
             
 
             Item.UseSound = SoundID.Item1;

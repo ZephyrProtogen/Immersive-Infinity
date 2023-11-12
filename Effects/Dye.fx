@@ -3,6 +3,7 @@ sampler uImage1 : register(s1);
 float3 uColor;
 float3 uSecondaryColor;
 float uOpacity;
+float2 uTargetPosition;
 float uSaturation;
 float uRotation;
 float uTime;
@@ -12,16 +13,39 @@ float uDirection;
 float3 uLightSource;
 float2 uImageSize0;
 float2 uImageSize1;
+float4 uLegacyArmorSourceRect;
+float2 uLegacyArmorSheetSize;
 
-float4 ArmorBasic(float4 sampleColor : COLOR0) : COLOR0
+// This is a shader. You are on your own with shaders. Compile shaders in an XNB project.
+
+float4 PixelShaderFunction(float2 coords : TEXCOORD0) : COLOR0
 {
-    return sampleColor;
+	float4 color = tex2D(uImage0, coords);
+
+	if (!any(color))
+		return color;
+
+	int choice = uTime % 4;
+
+	if(choice == 0)
+		color.r = 1;
+	else if(choice == 1)
+		color.g = 1;
+	else if (choice == 2)
+		color.b = 1;
+		// color = float4(0, 0, 1, 1);
+	// else if (choice == 3)
+	//   color = color;
+
+	return color;
+
+	// return color * tex2D(uImage0, coords).a;
 }
 
 technique Technique1
 {
-    pass ArmorBasic
-    {
-        PixelShader = compile ps_2_0 ArmorBasic();
-    }
+	pass DyePass
+	{
+		PixelShader = compile ps_2_0 PixelShaderFunction();
+	}
 }

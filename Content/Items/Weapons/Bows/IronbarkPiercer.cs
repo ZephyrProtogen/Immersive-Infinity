@@ -34,7 +34,7 @@ namespace immersiveinfinity.Content.Items.Weapons.Bows
 
             Item.value = Item.buyPrice(gold: 10, silver: 80, copper: 50);
             Item.value = Item.sellPrice(gold: 0, silver: 40);
-            Item.rare = ItemRarityID.White;
+            Item.rare = ItemRarityID.Green;
             Item.shoot = 1;
             Item.useAmmo = AmmoID.Arrow;
             Item.shootSpeed = 7f;

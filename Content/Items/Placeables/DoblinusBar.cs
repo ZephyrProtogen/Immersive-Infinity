@@ -21,6 +21,7 @@ namespace immersiveinfinity.Content.Items.Placeables
             Item.maxStack = 99;
             Item.consumable = true;
             Item.value = Item.buyPrice(silver: 25);
+            Item.rare = ItemRarityID.Purple;
            
             
             

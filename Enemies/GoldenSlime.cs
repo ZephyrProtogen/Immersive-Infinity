@@ -2,19 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ModLoader.Utilities;
-using System.Reflection;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
-
-using immersiveinfinity;
-using System;
-using Microsoft.Xna.Framework;
-
-using ReLogic.Utilities;
-using System.Collections.Generic;
-
 using Terraria.Audio;
-
 
 namespace immersiveinfinity.Enemies
 {
@@ -28,18 +16,24 @@ namespace immersiveinfinity.Enemies
         public override void SetDefaults()
         {
             NPC.aiStyle = 1;
-            NPC.scale = 1.5f;
+            NPC.scale = 1.2f;
             NPC.npcSlots = 1;
             NPC.width = 20;
             NPC.height = 20;
             NPC.defense = 6;
+            NPC.damage = 35;
             NPC.lifeMax = 160;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.knockBackResist = 0.2f;
             Main.npcFrameCount[NPC.type] = 2;
             NPC.value = 1000f;
+            NPC.friendly = false;
+            AIType = NPCID.BlueSlime;
             AnimationType = NPCID.BlueSlime;
+            
+           
+            
         }
 
 
@@ -50,10 +44,7 @@ namespace immersiveinfinity.Enemies
 
         public override void OnKill()
         {
-            //SoundStyle lego = new SoundStyle("immersiveinfinity/Sounds/caca");
-
-            //SoundEngine.PlaySound(lego);
-
+            
             Item.NewItem(NPC.GetSource_Death(), NPC.getRect(), ItemID.Gel, Main.rand.Next(15,25));
             Item.NewItem(NPC.GetSource_Death(), NPC.getRect(), ItemID.GoldOre, Main.rand.Next(30, 40));
         }
