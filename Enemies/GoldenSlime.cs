@@ -2,6 +2,19 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ModLoader.Utilities;
+using System.Reflection;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
+
+using immersiveinfinity;
+using System;
+using Microsoft.Xna.Framework;
+
+using ReLogic.Utilities;
+using System.Collections.Generic;
+
+using Terraria.Audio;
+
 
 namespace immersiveinfinity.Enemies
 {
@@ -37,6 +50,9 @@ namespace immersiveinfinity.Enemies
 
         public override void OnKill()
         {
+            //SoundStyle lego = new SoundStyle("immersiveinfinity/Sounds/caca");
+
+            //SoundEngine.PlaySound(lego);
 
             Item.NewItem(NPC.GetSource_Death(), NPC.getRect(), ItemID.Gel, Main.rand.Next(15,25));
             Item.NewItem(NPC.GetSource_Death(), NPC.getRect(), ItemID.GoldOre, Main.rand.Next(30, 40));

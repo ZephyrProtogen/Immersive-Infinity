@@ -7,6 +7,9 @@ using Terraria.Audio;
 using System;
 using SteelSeries.GameSense;
 using Steamworks;
+using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace immersiveinfinity.Projectiles
 {
@@ -38,10 +41,12 @@ namespace immersiveinfinity.Projectiles
 
             {
                 Projectile.ai[0]++;
+               
+                
+                
+                
                 if (Projectile.ai[0] > 60 * 1)
                 {
-
-
 
                     for (int i = 0; i < 200; i++)
                     {
@@ -80,6 +85,7 @@ namespace immersiveinfinity.Projectiles
                                 }
                             }
                         }
+                
 
 
 
@@ -88,6 +94,7 @@ namespace immersiveinfinity.Projectiles
                 }
             }
         }
+
     
 
 

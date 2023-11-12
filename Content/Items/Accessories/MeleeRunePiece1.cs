@@ -2,6 +2,10 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using immersiveinfinity;
+using Microsoft.Xna.Framework;
+
+using Terraria.DataStructures;
+
 
 namespace immersiveinfinity.Content.Items.Accessories
 {
@@ -11,6 +15,11 @@ namespace immersiveinfinity.Content.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
+
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 5));
+
+
+
             DisplayName.SetDefault("Melee Rune Piece 1");
             Tooltip.SetDefault("Minor improvement to melee damage\n"
                 + "15% extra damage\n"

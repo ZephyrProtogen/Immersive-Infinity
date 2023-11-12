@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 using immersiveinfinity.Projectiles;
 using immersiveinfinity.Content.Items.Weapons.Staffs;
 using Terraria.DataStructures;
-
+using Terraria.Audio;
 
 
 using Terraria.ModLoader.Utilities;
@@ -33,8 +33,9 @@ namespace immersiveinfinity.NPCs.Bosses
 		}
 		public override void SetDefaults()
 		{
-			
-			NPC.lifeMax = 40000;
+        
+
+            NPC.lifeMax = 40000;
 			NPC.damage = 10000;
 			NPC.defense = 55;
 			NPC.knockBackResist = 0f;
@@ -47,7 +48,7 @@ namespace immersiveinfinity.NPCs.Bosses
 			NPC.noGravity = true;
 			NPC.noTileCollide = true;
 			NPC.HitSound = SoundID.NPCHit1;
-			NPC.DeathSound = SoundID.NPCDeath1;
+
 			NPC.buffImmune[24] = true;
 			Music = MusicID.Boss3;
 		}
