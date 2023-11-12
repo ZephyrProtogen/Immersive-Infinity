@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1aqc7mw7oGtT2ulKzAkIS6h6/dNPcb6TUO8kdE0DyVIxgDhBdqpVI10OwrWOO0AI4C99k17lyn8DLrIWUzGG/w==",
+  "dgSpecHash": "jVOHKJ/C03+RjMUuVYyZoGfXYa4YWh6O9g1svYIp9CzLI14t4q7AxD8CcixPPE+63b0ZVeeiV9I6ZWy/nftPWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jakhod\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
+  "projectFilePath": "C:\\Users\\PanSm\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\immersiveinfinity\\immersiveinfinity.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jakhod\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+    "C:\\Users\\PanSm\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
   ],
   "logs": []
 }
