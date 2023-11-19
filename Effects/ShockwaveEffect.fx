@@ -1,4 +1,4 @@
-float4 Shockwave(float4 position : SV_POSITION, float2 coords : TEXCOORD0) : COLOR0
+﻿float4 Shockwave(float4 position : SV_POSITION, float2 coords : TEXCOORD0) : COLOR0
 {
     float2 targetCoords = (uTargetPosition - uScreenPosition) / uScreenResolution;
     float2 centreCoords = (coords - targetCoords) * (uScreenResolution / uScreenResolution.y);

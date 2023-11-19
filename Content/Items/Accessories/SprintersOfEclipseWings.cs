@@ -1,5 +1,4 @@
-﻿
-using IL.Terraria.Audio;
+﻿using IL.Terraria.Audio;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -21,7 +20,7 @@ namespace immersiveinfinity.Content.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Sprinters Of Eclipse"); 
+            DisplayName.SetDefault("Sprinters Of Eclipse");
             Tooltip.SetDefault("Use the unimaginary power of Eclipse\n"
                 + "Grants permament regeneration boost\n"
                 + "Grants permament jump boost\n"
@@ -35,7 +34,7 @@ namespace immersiveinfinity.Content.Items.Accessories
 
                 );
 
-            
+
         }
 
         public override void SetDefaults()
@@ -45,7 +44,7 @@ namespace immersiveinfinity.Content.Items.Accessories
             Item.value = 8600;
             Item.rare = ItemRarityID.Lime;
             Item.accessory = true;
-            
+
 
 
 
@@ -53,7 +52,7 @@ namespace immersiveinfinity.Content.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            
+
 
             player.GetDamage(DamageClass.Generic) += 0.15f;
             player.GetAttackSpeed(DamageClass.Generic) += 0.12f;
@@ -62,19 +61,19 @@ namespace immersiveinfinity.Content.Items.Accessories
             player.lifeRegen += 20;
             player.jumpBoost = true;
             player.jumpSpeedBoost = 2f;
-            player.wingTimeMax = 400; 
+            player.wingTimeMax = 400;
             player.lavaImmune = true;
             player.fireWalk = true;
             player.waterWalk = true;
             player.honey = true;
 
-     
+
         }
 
         public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising, ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
         {
             ascentWhenFalling = 0.4f;
-            ascentWhenRising= 0.3f;
+            ascentWhenRising = 0.3f;
             maxCanAscendMultiplier = 1f;
             maxAscentMultiplier = 3f;
             constantAscend = 0.235f;
@@ -84,7 +83,7 @@ namespace immersiveinfinity.Content.Items.Accessories
         {
             speed = 16f;
             acceleration += 1.5f;
-            
+
         }
         public override void AddRecipes()
         {
@@ -101,9 +100,8 @@ namespace immersiveinfinity.Content.Items.Accessories
 
         }
 
-     
+
 
 
     }
 }
-

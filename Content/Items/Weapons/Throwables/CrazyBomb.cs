@@ -42,13 +42,13 @@ namespace immersiveinfinity.Content.Items.Weapons.Throwables
 
 
 
-        } 
+        }
 
 
 
 
 
-        } 
-    
-  
+    }
+
+
 }

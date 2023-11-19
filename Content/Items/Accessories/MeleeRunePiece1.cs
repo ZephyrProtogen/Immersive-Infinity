@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using immersiveinfinity;
-
+using immersiveinfinity.Rarities;
 namespace immersiveinfinity.Content.Items.Accessories
 {
 
@@ -24,7 +24,7 @@ namespace immersiveinfinity.Content.Items.Accessories
             Item.width = 42;
             Item.height = 34;
             Item.value = 500;
-            Item.rare = ItemRarityID.Red;
+            Item.rare = ModContent.RarityType<woda>();
             Item.accessory = true;
 
 

@@ -11,16 +11,24 @@ public class woda : ModRarity
     {
         get
         {
-            var colors = new List<Color> { new(71, 142, 147), new(255, 242, 0) };
-            int num = (int)(Main.GlobalTimeWrappedHourly / 2f % colors.Count);
-            Color teal = colors[num];
-            Color yellow = colors[(num + 1) % colors.Count];
-            return Color.Lerp(teal, yellow,
-                Main.GlobalTimeWrappedHourly % 2f > 1f ? 1f : Main.GlobalTimeWrappedHourly % 1f);
+            List<Color> colors = new List<Color>
+            {
+                new Color(255, 0, 255, 255),
+                new Color(128, 0, 255, 255),
+                new Color(128, 0, 128, 255),
+                new Color(255, 0, 128, 255),
+                new Color(255, 0, 255, 0),
+            };
+            int numColors = colors.Count;
+            float fade = Main.GameUpdateCount % 60 / 60f;
+            int index = (int)(Main.GameUpdateCount / 60 % numColors);
+            int nextIndex = (index + 1) % numColors;
+            return Color.Lerp(colors[index], colors[nextIndex], fade);
         }
     }
 
-    /// <inheritdoc />
-    // no 'lower' tier to go to, so return the type of this rarity.
-    public override int GetPrefixedRarity(int offset, float valueMult) => Type;
+    public override int GetPrefixedRarity(int offset, float valueMult)
+    {
+        return Type; // no 'lower' tier to go to, so return the type of this rarity.
+    }
 }

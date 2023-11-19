@@ -18,10 +18,7 @@ namespace immersiveinfinity.Projectiles
 {
     public class CrazyBomb : ModProjectile
     {
-        private int rippleCount = 3;
-        private int rippleSize = 5;
-        private int rippleSpeed = 15;
-        private float distortStrength = 100f;
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Crazy Bomb");
@@ -33,30 +30,54 @@ namespace immersiveinfinity.Projectiles
             Projectile.width = 50;
             Projectile.height = 50;
             Projectile.friendly = true;
-            Projectile.timeLeft = 10;
+            Projectile.timeLeft = 180;
             Projectile.tileCollide = false;
             Projectile.penetrate = 4;
 
-        }
 
-        public override void Load()
-        {
-            if (!Main.dedServ)
+
+            if (Main.netMode != NetmodeID.Server)
             {
+                Ref<Effect> screenRef = new Ref<Effect>((Effect)Mod.Assets.Request<Effect>("Effects/ShockwaveEffect")); // The path to the compiled shader file.
 
-                Ref<Effect> screenRef = new Ref<Effect>((Effect)Mod.Assets.Request<Effect>("Effects/ShockwaveEffect")); // Be sure to update the effect path and pass name here.
                 Filters.Scene["Shockwave"] = new Filter(new ScreenShaderData(screenRef, "Shockwave"), EffectPriority.VeryHigh);
                 Filters.Scene["Shockwave"].Load();
+
+            }
+
+        }
+        public override void Kill(int timeLeft)
+        {
+            if (Main.netMode != NetmodeID.Server && Filters.Scene["Shockwave"].IsActive())
+            {
+                Filters.Scene["Shockwave"].Deactivate();
             }
         }
+
+
+
+
+
+
+
+
+        private int rippleCount = 3;
+        private int rippleSize = 5;
+        private int rippleSpeed = 15;
+        private float distortStrength = 100f;
+        int i = 0;
+
+
+
         public override void AI()
         {
             // ai[0] = state
             // 0 = unexploded
             // 1 = exploded
-   
-            if (Projectile.timeLeft <= 10)
+
+            if (Projectile.timeLeft <= 180)
             {
+                i++;
                 if (Projectile.ai[0] == 0)
                 {
                     Projectile.ai[0] = 1; // Set state to exploded
@@ -77,13 +98,8 @@ namespace immersiveinfinity.Projectiles
             }
         }
 
-        public override void Kill(int timeLeft)
-        {
-            if (Main.netMode != NetmodeID.Server && Filters.Scene["Shockwave"].IsActive())
-            {
-                Filters.Scene["Shockwave"].Deactivate();
-            }
-        }
+
+
 
     }
 
