@@ -23,14 +23,22 @@ public class immersiveinfinity : ModMenu
     {
         get
         {
-            return Mod.Assets.Request<Texture2D>("UITextures/Menu");
-
+            if (DateTime.Now.Month == 12 && DateTime.Now.Day >= 1)
+            {
+                return Mod.Assets.Request<Texture2D>("UITextures/MenuChristmas");
+            }
+            else
+            {
+                return Mod.Assets.Request<Texture2D>("UITextures/Menu");
+            }
+                                                                                                                                                                                                                                        
         }
     }
     
     public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
-    { 
-        spriteBatch.Draw(Mod.Assets.Request<Texture2D>("Backgrounds/Menu", AssetRequestMode.ImmediateLoad).Value, new Vector2(0,0),  Color.White);
+    {
+        spriteBatch.Draw(Mod.Assets.Request<Texture2D>("Backgrounds/Menu", AssetRequestMode.ImmediateLoad).Value, new Vector2(0, 0), Color.White);
+        //spriteBatch.Draw(Mod.Assets.Request<Texture2D>("UITextures/Menu", AssetRequestMode.ImmediateLoad).Value, new Vector2(500, 0), Color.White);
         return true;
     }
 
